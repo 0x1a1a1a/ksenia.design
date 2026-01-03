@@ -21,12 +21,17 @@
     * {
       margin: 0;
     }
+    
+    html {
+      height: 100%;
+    }
   
     body {
       font-family: sans-serif;
       font-size: 14px;
       line-height: 1.5;
       max-width: 600px;
+      min-height: 100vh;
       margin: 0 auto;
       padding: 4px 12px;
       background-image:
@@ -41,6 +46,8 @@
         radial-gradient(35% 56% at 91% 74%, #8A4FFFF5 9%, #073AFF00 100%),
         radial-gradient(74% 86% at 67% 38%, #6DFFAEF5 24%, #073AFF00 100%),
         linear-gradient(125deg, #4EB5FFFF 1%, #4C00FCFF 100%);
+      background-repeat: no-repeat;
+      background-size: cover;
       animation: 5s ease-in-out infinite alternate;
     }
   </style>
