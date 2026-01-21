@@ -2,16 +2,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
   <defs>
     <clipPath id="squircle-clip" clipPathUnits="objectBoundingBox">
-      <path d="M .15,0 
-               L .85,0 
-               C .95,0 1,.05 1,.15 
-               L 1,.85 
-               C 1,.95 .95,1 .85,1 
-               L .15,1 
-               C .05,1 0,.95 0,.85 
-               L 0,.15 
-               C 0,0.05 .05,0 .15,0 
-               Z" />
+      <path d="M 100, 0 
+               L 900, 0 
+               C 950, 0  1000, 50  1000, 100 
+               L 1000, 900 
+               C 1000, 950  950, 1000  900, 1000 
+               L 100, 1000 
+               C 50, 1000  0, 950  0, 900 
+               L 0, 100 
+               C 0, 50  50, 0  100, 0 
+               Z" 
+            transform="scale(0.001)" />
     </clipPath>
   </defs>
 </svg>
