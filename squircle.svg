@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
   <defs>
-    <clipPath id="squircle-clip" clipPathUnits="userSpaceOnUse">
-      <path d="
-        M 24, 0 
-        L 9999, 0 
-        C 9999, 0  9999, 0  9999, 24 
-        L 9999, 9999 
-        C 9999, 9999  9999, 9999  9975, 9999 
-        L 24, 9999 
-        C 0, 9999  0, 9999  0, 9975 
-        L 0, 24 
-        C 0, 0  0, 0  24, 0 
-        Z" />
+    <clipPath id="squircle-clip" clipPathUnits="objectBoundingBox">
+      <path d="M .1,0 
+               L .9,0 
+               C .96,0 1,.04 1,.1 
+               L 1,.9 
+               C 1,.96 .96,1 .9,1 
+               L .1,1 
+               C .04,1 0,.96 0,.9 
+               L 0,.1 
+               C 0,.04 .04,0 .1,0 
+               Z" />
     </clipPath>
   </defs>
 </svg>
