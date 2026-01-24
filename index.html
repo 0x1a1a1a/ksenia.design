@@ -71,14 +71,10 @@
       margin: 32px 0;
       padding: 16px 32px;
       background-color: #ffffff;
-      --wave-height: 40px;
+
       clip-path: shape(
-        from 0px var(--wave-height),
-        curve to 100% var(--wave-height) 
-              with 25% 0px / 75% calc(var(--wave-height) * 2),
-        vline to calc(100% - var(--wave-height)),
-        curve to 0 calc(100% - var(--wave-height))
-              with 75% 100% / 25% calc(100% - var(--wave-height) * 2),
+        from 0 0,
+        hline to 100%,
         close)
     }
 
