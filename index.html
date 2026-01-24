@@ -73,11 +73,18 @@
       background-color: #ffffff;
 
       clip-path: shape(
-        from 32px 0%,
-        hline to calc(100%-32px),
-        vline to 100%,
-        hline to -80%,
-        close)
+from 5px 0%,
+              hline to calc(100% - 5px),
+              curve to 100% 5px with 100% 0%,
+              vline to calc(100% - 8px),
+              curve to calc(100% - 5px) calc(100% - 3px) with 100% calc(100% - 3px),
+              hline to 70%,
+              line by -2px 3px,
+              line by -2px -3px,
+              hline to 5px,
+              curve to 0% calc(100% - 8px) with 0% calc(100% - 3px),
+              vline to 5px,
+              curve to 5px 0% with 0% 0%);
     }
 
     hr {
