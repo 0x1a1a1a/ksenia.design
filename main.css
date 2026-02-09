@@ -1,0 +1,210 @@
+    :root {
+      --card-type-2-bg-color: rgba(13, 17, 23, 0.8);
+      --card-type-2-border-color: rgba(48, 54, 61, 0.8);
+      --card-type-2-glare-color: rgba(255, 255, 255, 0.15);
+    }
+
+    *,
+    ::before,
+    ::after {
+      box-sizing: border-box;
+    }
+
+    * + * {
+      margin: 0;
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    
+    @font-face {
+      font-family: "Mariupol";
+      src: url("/fonts/Mariupol-Regular.woff2") format("woff2");
+      font-weight: 400;
+      font-style: normal;
+    }
+    
+    @font-face {
+      font-family: "Mariupol";
+      src: url("/fonts/Mariupol-Medium.woff2") format("woff2");
+      font-weight: 500;
+      font-style: normal;
+    }
+    
+    body {
+      font-family: "Mariupol";
+      font-size: 16px;
+      line-height: 1.25;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      max-width: 600px;
+      min-height: 100vh;
+      margin: 0 auto;
+      padding: 8px 24px;
+      background-image:
+        radial-gradient(75% 75% at 25% 5%, #0a0afc80 5%, #00000000 100%),
+        radial-gradient(75% 75% at 75% 10%, #ff80ff80 10%, #00000000 100%);
+        /* radial-gradient(50% 25% at 0% 25%, #0af0fc80 2%, #00000000 100%); */
+        /* radial-gradient(40% 60% at 55% 45%, #7575ff80 5%, #8585ff00 100%),
+        radial-gradient(40% 60% at 25% 75%, #7575ff40 5%, #8585ff00 100%),
+        radial-gradient(75% 50% at 75% 75%, #7575ff40 10%, #8585ff00 100%);
+        radial-gradient(31% 43% at 7% 98%, #FFFFFFFF 24%, #073AFF00 100%),
+        radial-gradient(21% 37% at 72% 23%, #D3FF6D9C 24%, #073AFF00 100%),
+        radial-gradient(35% 56% at 91% 74%, #8A4FFFF5 9%, #073AFF00 100%),
+        radial-gradient(74% 86% at 67% 38%, #6DFFAEF5 24%, #073AFF00 100%);
+        linear-gradient(125deg, #4b4bff 1%, #1a1a1a 100%); */
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: #0d1117;
+      /* animation: 5s ease-in-out infinite alternate; */
+    }
+
+    section {
+      background-color: #ffffff;
+      padding: 16px 32px;
+      margin: 32px 0;
+    }
+
+    .card-type-1 {
+      margin: 8px 0 16px;
+      padding: 16px 24px;
+      background-color: #1a1a1a80;
+      height: 100%;
+      --radius: 32px;
+      clip-path: shape(
+        from var(--radius) 0%,
+        hline to calc(100% - var(--radius)),
+        curve to 100% var(--radius) with 100% 0%,
+        vline to calc(100% - var(--radius)),
+        curve to calc(100% - var(--radius)) 100% with 100% 100%,
+        hline to var(--radius),
+        curve to 0% calc(100% - var(--radius)) with 0% 100%,
+        vline to var(--radius),
+        curve to var(--radius) 0% with 0% 0%,
+        close
+      );
+    }
+
+/*
+    .card-type-2-glow {
+    -webkit-filter:blur(50px);
+    filter:blur(50px);
+    background: radial-gradient(circle at 0 100%,#e6b7fe 20%,#5049c2 40%,rgba(58,55,255,0) 50%);
+    width: 60%;
+    padding: 30% 0;
+    position: absolute;
+    left: 35%;
+    transform: translateY(-70%)rotate(-45deg);
+    z-index: -1;
+overflow: hidden;
+    }
+*/
+
+  .card-type-2 {
+
+      --radius: 41px;
+      clip-path: shape(
+        from var(--radius) 0%,
+        hline to calc(100% - var(--radius)),
+        curve to 100% var(--radius) with 100% 0%,
+        vline to calc(100% - var(--radius)),
+        curve to calc(100% - var(--radius)) 100% with 100% 100%,
+        hline to var(--radius),
+        curve to 0% calc(100% - var(--radius)) with 0% 100%,
+        vline to var(--radius),
+        curve to var(--radius) 0% with 0% 0%,
+        close
+      );
+      position: relative;
+      z-index: 0;
+    }
+
+    .card-type-2:before {
+      content: "";
+      display: inline-block;
+      border-radius: 50%;
+      z-index: -1;
+      inset: 0;
+    }
+
+    .card-type-2-frame {
+      width: 100%;
+      height: auto;
+      background: rgba(255,255,255,.1);
+      border: 12px solid rgba(255,255,255,.1);
+      position: relative;
+      --radius: 40px;
+      clip-path: shape(
+        from var(--radius) 0%,
+        hline to calc(100% - var(--radius)),
+        curve to 100% var(--radius) with 100% 0%,
+        vline to calc(100% - var(--radius)),
+        curve to calc(100% - var(--radius)) 100% with 100% 100%,
+        hline to var(--radius),
+        curve to 0% calc(100% - var(--radius)) with 0% 100%,
+        vline to var(--radius),
+        curve to var(--radius) 0% with 0% 0%,
+        close
+      );
+    }
+
+    .card-type-2-frame:after {
+      content: "";
+      z-index: 0;
+      -webkit-filter: blur(40px);
+      filter: blur(40px);
+      mix-blend-mode: color-dodge;
+      background: radial-gradient(#ffc58b 10%,#e1a6ff 20%,#e1a6ff 30%,#352cee 60%);
+      width: 80%;
+      height: 30%;
+      position: absolute;
+      top: -5%;
+      left: 10%;
+    }
+
+    .card-type-2-base {
+      padding: 16px 24px;
+      width: 100%;
+      height: 100%;
+      --radius: 28px;
+      clip-path: shape(
+        from var(--radius) 0%,
+        hline to calc(100% - var(--radius)),
+        curve to 100% var(--radius) with 100% 0%,
+        vline to calc(100% - var(--radius)),
+        curve to calc(100% - var(--radius)) 100% with 100% 100%,
+        hline to var(--radius),
+        curve to 0% calc(100% - var(--radius)) with 0% 100%,
+        vline to var(--radius),
+        curve to var(--radius) 0% with 0% 0%,
+        close
+      );
+    }
+
+    .card .date {
+      font-size: 12px;
+      color: #ffffffa0;
+      margin-top: 4px;
+    }
+
+    hr {
+      border: 0;
+      margin: 16px 0;
+    }
+
+    h2 {
+      margin: 0 0 8px;
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 125%;
+      color: #fffffff0;
+    }
+
+    p {
+      margin: 0 0 8px;
+      font-weight: 400;
+      line-height: 125%;
+      color: #ffffffd0;
+    }
